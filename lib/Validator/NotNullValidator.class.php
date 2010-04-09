@@ -1,0 +1,1 @@
+<?phpif(!defined('_IN'))	exit();class NotNullValidator implements Validator{	var $error='';	function __construct()	{	}	function check($what)	{		if($what=='' OR $what == null OR !$what)		{			$this->error='Ce champs est requis';			return false;		}		return true;	}	function errorText()	{		return $this->error;	}}?>

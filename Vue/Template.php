@@ -1,0 +1,1 @@
+<?phpif(!defined('_IN'))	exit;function AddTemplateVar($obj){	}?>

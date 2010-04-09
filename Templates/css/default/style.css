@@ -1,0 +1,105 @@
+label 
+{
+	display:block;
+	width:150px;
+	float:left;
+}
+
+.center
+{
+	text-align:center;
+}
+
+.ok
+{
+	color : green;
+	font-weight:bold;
+}
+
+/* CORPS - MENU ... */
+body
+{
+	background-color :black;
+}
+
+
+
+.corps
+{
+	background-color : white;
+	border: solid black 2px;
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	padding:20px;
+ 
+}
+
+#pied_de_page
+{
+	margin:5px;
+	text-align:center;
+	background-color : white;
+	background-image:url("motif.png");
+	background-repeat:repeat-x;
+	border:2px solid black;
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	
+}
+
+
+table
+{
+	background-color : white;
+}
+
+h1
+{
+	text-align:center;
+	color:black;
+	font-family : "Cooper Black",Arial,serif;
+}
+
+h3
+{
+	text-align:center;
+	color: green;
+
+}
+
+h4 
+{
+	text-align:center;
+	color: blue;
+	font-family : "Constantia",Arial,serif;
+}
+
+h6
+{
+	text-align:left;
+	color:blue;
+}
+
+a
+{
+	 text-decoration: none ;
+	 color: blue;
+}
+
+a:visited 
+{
+	color: green ; 
+}
+
+a:hover 
+{
+	 text-decoration: underline  ;
+	 color: blue;
+}
+
+
+
+.error
+{
+color : red;
+}
