@@ -2,15 +2,7 @@
 if(!defined('_IN'))
 	exit();
 
-class Singleton
-{
-	
-	private function Singleton(){}
-	
-	
-}
-
-class Site extends Singleton
+class Site
 {
 	//SINGLETON
 	private static $instance;
@@ -184,7 +176,7 @@ class Site extends Singleton
 		'Validator/all.php',
 		'ArrayRender','ModelCreatorForm',
 		'Debug','Visiteur','Cache','MySqlDatabase','MySqlResult','DbModel','ConfigAccessor');
-		$defaultVue = array();
+		$defaultVue = array('Template.php');
 		$defaultModel = array();
 		
 		foreach($libFiles as $f)
@@ -194,12 +186,12 @@ class Site extends Singleton
 		}
 		foreach($defaultVue as $v)
 		{
-			if(!$this->addVue($v,false))
+			if(!$this->addVue($v,(strpos($v,'.php') !== false)))
 				throw new Exception('Impossible d\'inclure la Vue '.htmlentities($v));
 		}
 		foreach($defaultModel as $v)
 		{
-			if(!$this->addModel($v,false))
+			if(!$this->addModel($v,(strpos($v,'.php') !== false)))
 				throw new Exception('Impossible d\'inclure le Model '.htmlentities($v));
 		}	
 		return true;

@@ -1,1 +1,1 @@
-<?phpif(!defined('_IN'))	exit;function AddTemplateVar($obj){	}?>
+<?phpif(!defined('_IN'))	exit;function AddTemplateCustomVars($obj, $isCached){	if($isCached)		return;		// Ajouter ici les items de template personalisés.	// (...)		// Ajouter en dessous les items de template, en fonction de la page	// (Si ils sont présents sur plusieurs pages, sinon, les définir sur la page)	/** Exemple :	switch($obj->page)	{		case 'index':		case 'page2':		{						$obj->setVar('total_account', AccountMgr::GetCount());					}		default:		{					}		}	//**/}?>

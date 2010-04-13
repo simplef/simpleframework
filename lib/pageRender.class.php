@@ -11,6 +11,8 @@ class PageRender extends Smarty
 	var $filArianeArray = -1;
 	var $cacheId = '';
 	
+	var $page = '';
+	
 	function __construct($tplDir,$tplDefault)
 	{
 		if($tplDefault == '')
@@ -164,6 +166,7 @@ class PageRender extends Smarty
 	function afficher($name)
 	{
 		//Gestion du cache
+		$this->page = $name;
 		$fileName = $name.'.tpl';
 		ob_start();
 
@@ -177,6 +180,9 @@ class PageRender extends Smarty
 
 		//Definition de variables génériques
 		$this->setVar('pageName',$fileName);
+		
+		// Modifier ici (et dans le template) pour définir le titre.
+		// ... Ou bien dans AddTemplateCustomVars()
 		$this->setMetas();
 		$this->setCssDir();
 		$this->setFavicon();
@@ -186,7 +192,10 @@ class PageRender extends Smarty
 		$this->setFil();
 		$this->setVar('racine',$this->getPref());
 		$this->setVar('site_short_name',Config::getSiteShortName());
-
+		
+		// Variables personnalisées, pour l'utilisateur
+		AddTemplateCustomVars($this, false);
+		
 		if($this->cacheId!='')
 			$this->display('page.tpl',$this->cacheId);
 		else
@@ -197,6 +206,7 @@ class PageRender extends Smarty
 	{
 		if($this->cacheId!='' && $this->isCached())
 		{		// Disponible en cache
+			AddTemplateCustomVars($this, true);
 			$this->display('page.tpl',$this->cacheId); 
 			return true;
 		}
