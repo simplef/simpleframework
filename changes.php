@@ -28,8 +28,13 @@ $changelog = array(
 	'0.0.7' =>
 	array('Ajout de validateurs pour les formulaires [1/2]' => array('StringValidator','NotNullValidator'),
 	'Affichage correct des erreurs' => array('cf : form.test.php')),
-	'0.0.8' =>
-	array('Ajout de validateurs pour les formulaires [1/2]' => array('StringValidator','NotNullValidator'),
-	'Affichage correct des erreurs' => array('cf : form.test.php'))
+	'0.1' =>
+	array('Premiere version stable ! :)' => array(),
+	'Possibilite d\'ajouter des variables persos plus simplement aux template'
+		=> array('Vue/Template.php : AddTemplateCustomVars($obj, $isCached)'),
+	'Passage a GIT' => array('Repo heberge sur github.com','Les changements mineurs seront indiques la bas.'),
+	'Plus besoin de faire un define(\'_IN\') au debut de chaque fichier. C\'est fait dans init.php' => array(),
+	'Deplacement des test dans un repoertoire Test/' => array(),
+	'"Securisation" avec des .htaccess et un index.html dans le dossier CSS.' => array())
 );
 ?>

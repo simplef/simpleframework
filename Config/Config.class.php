@@ -46,7 +46,7 @@ class ConfigBase
 	function getCacheFileExt()
 	{	return '.cache';}
 	function getSiteShortName()
-	{	return 'Simple Framework Site : 0.0.7'; }
+	{	return 'Simple Framework Site : 0.1'; }
 	function getFavicon()
 	{	return 'http://www.macdirectory.fr/img/favicons/favicon_defaut.png';}
 	function isDevMode()
