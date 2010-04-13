@@ -8,7 +8,7 @@ class Site
 	private static $instance;
 	
 	var $includeList = array();
-	// = ceux donnés dans la config
+	// = ceux donnes dans la config
 	var $modelDir = '';
 	var $vueDir = '';
 	var $libDir='';
@@ -22,7 +22,7 @@ class Site
 	/*
 	PUBLIC
 	*/
-	//Constructeur privé
+	//Constructeur prive
 	private function Site(){}
 	public function load($repRacine='',$doNothing = false)
 	{
@@ -81,10 +81,10 @@ class Site
 		if($this->config->isDevMode())
 			echo '<p><em>[debug]</em>'.$what.'</p>';
 	}
-	//Copie non autorisée
+	//Copie non autorisee
 	private function __clone()
 	{
-		trigger_error('Copie d\'une classe SigleTon non autorisée : '.__CLASS__, E_USER_ERROR);
+		trigger_error('Copie d\'une classe SigleTon non autorisee : '.__CLASS__, E_USER_ERROR);
 	}
 	
 	function addModel($name,$isFullName=false)
@@ -101,7 +101,7 @@ class Site
 	}
 	function includeFile($path,$fileName)
 	{
-		if(in_array($path.$fileName,$this->includeList)) //Déja inclut
+		if(in_array($path.$fileName,$this->includeList)) //Deja inclut
 			return true;
 			
 		if(!@include($this->repRacine.$path.$fileName))
@@ -117,7 +117,7 @@ class Site
 		{
 			die('<h1 style="color:red;">Fatal error</h1>
 				L\'erreur suivante a eu lieu dans la fonction <strong>'.htmlentities($function).'</strong> :
-				<fieldset><legend>Erreur rapportée</legend>
+				<fieldset><legend>Erreur rapportee</legend>
 				<span style="color:red;">'.htmlentities($erreur).'</span>
 				</fieldset>');
 		}
@@ -151,7 +151,7 @@ class Site
 	{
 		$this->config = getCurrentConfig();
 		if(!is_a($this->config,'ConfigBase') || !is_subclass_of($this->config,'ConfigBase'))
-			throw new Exception('La classe de configuration DOIT hériter de la classe Config.');
+			throw new Exception('La classe de configuration DOIT heriter de la classe Config.');
 		if($this->config->isDevMode())
 			@error_reporting(E_ALL);
 			
@@ -166,7 +166,7 @@ class Site
 	{
 		$this->timeMgr = new Chrono;
 		$this->timeMgr->start();
-		$this->timeMgr->markTime('Début compteur temps');
+		$this->timeMgr->markTime('Debut compteur temps');
 		return true;
 	}
 	function _loadDefaultClasses()
@@ -200,7 +200,7 @@ class Site
 	{
 		$this->db = new MySqlDatabase;
 		if(!$this->db->connect($this->config->DbLogin(),$this->config->DbPass(),$this->config->DbHost()))
-			throw new Exception('Impossible de se connecter à la base de données.');
+			throw new Exception('Impossible de se connecter à la base de donnees.');
 		if(!$this->db->selectDb($this->config->DbName()))
 			throw new Exception('Database inexistante.');
 		return true;

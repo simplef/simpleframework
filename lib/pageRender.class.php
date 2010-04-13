@@ -1,5 +1,5 @@
 <?php 
-//Ne peux pas utiliser Config:: ici (espace global). Pas encore chargé.
+//Ne peux pas utiliser Config:: ici (espace global). Pas encore charge.
 define('SMARTY_DIR', Site::racine().Site::instance()->config->getLibDir().'Smarty/'); 
 require(SMARTY_DIR . 'Smarty.class.php'); 
 
@@ -34,7 +34,7 @@ class PageRender extends Smarty
 		if(Config::isDevMode())
 			return false;
 		$this->compile_check = false;
-		$this->caching = 2; //1 durée de cache / fichier
+		$this->caching = 2; //1 duree de cache / fichier
 		$this->cache_lifetime = $cacheTime;
 		$this->cacheId = $cacheId;
 		$this->refreshCacheDir();
@@ -78,7 +78,7 @@ class PageRender extends Smarty
 	
 	/*
 	##################################
-	# Fonction utilisées avant la génération
+	# Fonction utilisees avant la generation
 	##################################
 	*/
 	function setMetas($metas = array())
@@ -178,10 +178,10 @@ class PageRender extends Smarty
 		else
 			$this->setVar('titre','');
 
-		//Definition de variables génériques
+		//Definition de variables generiques
 		$this->setVar('pageName',$fileName);
 		
-		// Modifier ici (et dans le template) pour définir le titre.
+		// Modifier ici (et dans le template) pour definir le titre.
 		// ... Ou bien dans AddTemplateCustomVars()
 		$this->setMetas();
 		$this->setCssDir();
@@ -193,7 +193,7 @@ class PageRender extends Smarty
 		$this->setVar('racine',$this->getPref());
 		$this->setVar('site_short_name',Config::getSiteShortName());
 		
-		// Variables personnalisées, pour l'utilisateur
+		// Variables personnalisees, pour l'utilisateur
 		AddTemplateCustomVars($this, false);
 		
 		if($this->cacheId!='')
