@@ -38,7 +38,7 @@ class ConfigBase
 	{	return 'Cache/';}
 	
 	function getSiteBaseUrl()
-	{	return 'http://daemondev.free.fr/dev/';	}
+	{	return 'http://localhost/';	}
 	function getTemplateExt()
 	{	return '.tpl';	}
 	function getDefaultTemplateName()

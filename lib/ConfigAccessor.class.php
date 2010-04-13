@@ -116,3 +116,4 @@ class Config
 	function isDevMode()
 	{	return Config::instance()->_config->isDevMode();}
 }
+?>

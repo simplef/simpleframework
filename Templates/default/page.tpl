@@ -5,7 +5,6 @@
 -filArianeActive
 -filAriane (Name => Url)
 *}
-
 {include file="include/header.tpl"}
 		<div class="corps">
 			<h1>{$pageHead}</h1>
