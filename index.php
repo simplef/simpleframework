@@ -1,5 +1,4 @@
 <?php
-define('_IN',true);
 include('init.php');
 include('changes.php');
 $pr = Site::instance()->getNewRender();

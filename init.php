@@ -1,6 +1,6 @@
 <?php
 if(!defined('_IN'))
-	exit();
+	define('_IN', true);
 //ini_set("memory_limit" , "500M");
 
 // Definir le repertoire racine
