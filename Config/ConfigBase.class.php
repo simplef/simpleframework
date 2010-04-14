@@ -26,6 +26,7 @@ class ConfigBase
 	function getCacheDir()
 	{	return 'Cache/';}
 	
+	/* Utilise par le template, pour inclure le CSS. */
 	function getSiteBaseUrl()
 	{	return 'http://localhost/framework/';	}
 	function getTemplateExt()
