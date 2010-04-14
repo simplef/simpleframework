@@ -1,13 +1,13 @@
 {* Smarty *}
 {* index.tpl *}
 
-<h3>{$site_short_name} - Installation réussie !</h3>
+<h3>{$site_short_name} - Installation r&eacute;ussie !</h3>
 <p>
-Simple Framework a été <span class="ok">correctement installé</span> !<br />
+Simple Framework a &eacute;t&eacute; <span class="ok">correctement install&eacute;</span> !<br />
 Vous pouvez maintenant :
 <ul>
-	<li><span class="ok">Modifier la configuration</span> située dans <em>Config/config.class.php</em>, pour indiquer par exemple l'URL du site.</li>
-	<li>... y modifier le design par défaut et <span class="ok">créer votre propre template</span>, dans <em>Template/NomDuTemplate</em> et <em>Template/css/NomDuTemplate</em></li>
+	<li><span class="ok">Modifier la configuration</span> situ&eacute;e dans <em>Config/config.class.php</em>, pour indiquer par exemple l'URL du site.</li>
+	<li>... y modifier le design par d&eacute;faut et <span class="ok">cr&eacute;er votre propre template</span>, dans <em>Template/NomDuTemplate</em> et <em>Template/css/NomDuTemplate</em></li>
 	<li>Commencer à coder chaque page dans un environnement <span class="ok">sain et rapide</span> avec à votre disposition :
 			<ul>
 				<li><span class="ok">JQuery</span></li>
@@ -23,7 +23,7 @@ Vous pouvez maintenant :
 </div>
 
 <h3>Changements</h3>
-<p class="center"><a href="#" id="showChangelog">Afficher</a> - <a href="#" id="hideChangelog">Réduire</a></p>
+<p class="center"><a href="#" id="showChangelog">Afficher</a> - <a href="#" id="hideChangelog">R&eacute;duire</a></p>
 <div id="changelog">
 	<ul>
 	{foreach from=$changelog key=versionTxt item=version name=versionLoop}
@@ -51,22 +51,22 @@ Vous pouvez maintenant :
 {literal}
 <p>
 Vous vous demandez surement à quoi ressemble une page avec ce framework ?<br />
-Voici quelques exemples de codes commentés :<br />
+Voici quelques exemples de codes comment&eacute;s :<br />
 <pre name="code" class="php">
 define('_IN',true);
 include('init.php'); //initialisation
 include('changes.php'); //Array du changelog ($changelog)
-$pr = Site::instance()->getNewRender(); //Objet pour la génération de la sortie
+$pr = Site::instance()->getNewRender(); //Objet pour la g&eacute;n&eacute;ration de la sortie
 $pr->useCache('index',100); //On active le cache de cette page, sous le nom de index et pour 100 sec.
 if(!$pr->afficherSiCache()) //Affiche la page si elle est en cache
 {
-	//Sinon on définit les variables et le template fait tout le travail.
+	//Sinon on d&eacute;finit les variables et le template fait tout le travail.
 	$pr->setVar('changelog',$changelog);
 	$pr->afficher('index');
 }
 </pre>
 {/literal}
-Les templates sont gérés via <a href="http://www.smarty.net/">Smarty</a>, un gestionnaire rapide et efficace de templates.
+Les templates sont g&eacute;r&eacute;s via <a href="http://www.smarty.net/">Smarty</a>, un gestionnaire rapide et efficace de templates.
 <br />Le code du template ressemble à ca (<a href="#" id="afficherHtml">Afficher</a>);<br />
 <div id="codeHtml">
 	<pre name="code" class="html">
