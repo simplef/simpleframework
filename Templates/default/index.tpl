@@ -6,7 +6,7 @@
 Simple Framework a été <span class="ok">correctement installé</span> !<br />
 Vous pouvez maintenant :
 <ul>
-	<li><span class="ok">Modifier la configuration</span> située dans <em>Config/config.class.php</em></li>
+	<li><span class="ok">Modifier la configuration</span> située dans <em>Config/config.class.php</em>, pour indiquer par exemple l'URL du site.</li>
 	<li>... y modifier le design par défaut et <span class="ok">créer votre propre template</span>, dans <em>Template/NomDuTemplate</em> et <em>Template/css/NomDuTemplate</em></li>
 	<li>Commencer à coder chaque page dans un environnement <span class="ok">sain et rapide</span> avec à votre disposition :
 			<ul>
