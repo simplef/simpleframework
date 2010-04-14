@@ -2,6 +2,8 @@
 if(!defined('_IN'))
 	exit();
 
+
+
 class Html
 {
 	static function htmlTag($tagName,$innerHTML=null,$params=null)
@@ -37,6 +39,34 @@ class Html
 	static function table($content)
 	{
 		return Html::tag('table',$content);
+	}
+	
+	static function escapeAccents($str)
+	{
+		
+		$accents = array(
+		'£' => 'pound',		'è' => 'egrave',
+    	'¤' => 'curren',		'é' => 'eacute',
+		'À' => 'Agrave',		'ê' => 'ecirc',
+		'Á' => 'Aacute',		'ë' => 'euml',
+		'Â' => 'Acirc',		'î' => 'icirc',
+		'¡' => 'iexcl',		'Ã' => 'Atilde',		'ô' => 'ocirc',
+		'¢' => 'cent',		'Ä' => 'Auml',		'ù' => 'ugrave'
+		);
+		return Html::str_accents_replace_assoc($accents, $str);
+	}
+	
+	static function str_accents_replace_assoc($array,$string)
+	{
+		$from_array = array();
+		$to_array = array();
+		
+		foreach ($array as $k => $v){
+			$from_array[] = $k;
+			$to_array[] = '&'.$v.';';
+		}
+		
+		return str_replace($from_array,$to_array,$string);
 	}
 	//function html($txt){return htmlentities($txt);}
 	static function escape($txt){return htmlentities($txt);}
